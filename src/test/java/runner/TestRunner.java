@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         //name of the package where step definitions are available
         glue = "steps",
         dryRun = false,
-        tags = "@validcredential",
+        tags = "@loginsteps",
         plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json"}
 )
 

@@ -1,7 +1,7 @@
 Feature: Login steps
 
 
-  @validcredential
+  @validcredential @totaltest
   Scenario: Entering login credentials and navigating to add employee
     When user enters valid username and password
     And user clicks on login button
@@ -9,14 +9,14 @@ Feature: Login steps
     When user clicks on PIM option
     And user clicks on Add employee option
 
-  @emptyUsername @loginsteps
+  @emptyUsername @loginsteps @totaltest
   Scenario: blank username credentials
     When user enters blank username
     And user enters valid password
     And user clicks on login button
     Then user is able to see error message
 
-  @emptyPassword @loginsteps
+  @emptyPassword @loginsteps @totaltest
   Scenario: blank password credentials
     When user enters valid username
     And user enters blank password

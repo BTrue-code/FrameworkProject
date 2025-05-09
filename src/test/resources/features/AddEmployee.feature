@@ -9,14 +9,14 @@ Feature: Add Employee
     And user clicks on Add employee option
 
 
-    @employeecredentials @addemployee
+    @employeecredentials @addemployee @totaltest
     Scenario: Adding the employee by firstname middlename and lastname
       And user enters firstname middlename and lastname
       And user clicks on save button
       Then employee is added sucessfully
 
 
-    @employeeid @addemployee
+    @employeeid @addemployee @totaltest
     Scenario: Adding the employee by firstname lastname and id number
       And user enters firstname and lastname
       And user enters employees id number

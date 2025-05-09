@@ -1,8 +1,9 @@
 package steps;
 
-import io.cucumber.java.en.Given;
+
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import pages.LoginPage;
 import utils.CommonMethods;
 import utils.ConfigReader;
@@ -43,7 +44,9 @@ public class LoginSteps extends CommonMethods {
 
     @Then("user can see error message")
     public void user_can_see_error_message() {
-        System.out.println("Password is empty.");
+        String errorMessage = loginPage.errorMessage.getText();
+        Assert.assertEquals(errorMessage, "Password is Empty");
+        System.out.println("Password is Empty");
     }
 
 
@@ -61,13 +64,17 @@ public class LoginSteps extends CommonMethods {
 
     @Then("user sees error message")
     public void user_sees_error_message() {
+        String errorMessage = loginPage.errorMessage.getText();
+        Assert.assertEquals(errorMessage, "Invalid credentials");
         System.out.println("Invalid credentials.");
     }
 
 
     @Then("user is able to see error message")
     public void user_is_able_to_see_error_message() {
-        System.out.println("Username cannot be empty.");
+        String errorMessage = loginPage.errorMessage.getText();
+        Assert.assertEquals(errorMessage, "Username cannot be empty");
+        System.out.println("Username cannot be empty");
     }
 
 
@@ -81,6 +88,8 @@ public class LoginSteps extends CommonMethods {
 
     @Then("user is able to see the dashborad page")
     public void user_is_able_to_see_the_dashborad_page() {
+        String errorMessage = loginPage.errorMessage.getText();
+        Assert.assertEquals(errorMessage, "Password is Empty");
         System.out.println("Successfully loaded dashboard");
     }
 
