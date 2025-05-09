@@ -16,7 +16,7 @@ public class Hooks extends CommonMethods {
     @After
     public void end(Scenario scenario) {
 
-        /*byte[] pic;
+        byte[] pic;
 
 
         if(scenario.isFailed()) {
@@ -25,7 +25,7 @@ public class Hooks extends CommonMethods {
             pic = takeScreenshot("passed/" + scenario.getName());
         }
 
-        scenario.attach(pic, "image/png", scenario.getName());*/
+        scenario.attach(pic, "image/png", scenario.getName());
 
         //closeBrowser();
     }

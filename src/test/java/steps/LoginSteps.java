@@ -72,4 +72,30 @@ public class LoginSteps extends CommonMethods {
 
 
 
+    @When("user enters valid username and password")
+    public void user_enters_valid_username_and_password() {
+        sendText(ConfigReader.read("username"), loginPage.userName);
+        sendText(ConfigReader.read("password"), loginPage.password);
+    }
+
+
+    @Then("user is able to see the dashborad page")
+    public void user_is_able_to_see_the_dashborad_page() {
+        System.out.println("Successfully loaded dashboard");
+    }
+
+
+    @When("user clicks on PIM option")
+    public void user_clicks_on_pim_option() {
+        click(loginPage.pimOptBtn);
+    }
+
+
+    @When("user clicks on Add employee option")
+    public void user_clicks_on_add_employee_option() {
+        click(loginPage.addEmpOption);
+    }
+
+
+
 }

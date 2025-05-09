@@ -50,6 +50,7 @@ public class CommonMethods extends PageInitializer {
     }
 
 
+
     public void closeBrowser() {
         if(driver != null) {
             driver.quit();
@@ -98,14 +99,14 @@ public class CommonMethods extends PageInitializer {
     }
 
 
-    /*public byte[] takeScreenshot(String fileName) {
+    public byte[] takeScreenshot(String fileName) {
         TakesScreenshot ts = (TakesScreenshot) driver;
         byte[] picByte = ts.getScreenshotAs(OutputType.BYTES);
         File sourceFile = ts.getScreenshotAs(OutputType.FILE);
 
         try {
             FileUtils.copyFile(sourceFile,
-                    new File(Constants.SCREENSHOT_FILE_PATH + fileName + " " + getTimeStamp("yyyy-MM-dd-HH-mm-ss") + ".png"));
+                    new File(Constants.SCREEN_FILE_PATH + fileName + " " + getTimeStamp("yyyy-MM-dd-HH-mm-ss") + ".png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -117,6 +118,6 @@ public class CommonMethods extends PageInitializer {
 
         SimpleDateFormat sdf = new SimpleDateFormat(pattern);
         return sdf.format(date);
-    }*/
+    }
 
 }

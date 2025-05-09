@@ -19,6 +19,12 @@ public class LoginPage extends CommonMethods {
     @FindBy(id = "btnLogin")
     public WebElement loginButton;
 
+    @FindBy(id="menu_pim_viewPimModule")
+    public WebElement pimOptBtn;
+
+    @FindBy(id="menu_pim_addEmployee")
+    public WebElement addEmpOption;
+
 
     public LoginPage() {
         PageFactory.initElements(driver, this);

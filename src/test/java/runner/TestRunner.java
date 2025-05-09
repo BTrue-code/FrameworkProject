@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
         //name of the package where step definitions are available
         glue = "steps",
         dryRun = false,
-        tags = "@loginsteps",
-        plugin = {"pretty"}
+        tags = "@validcredential",
+        plugin = {"pretty", "html:target/cucumber.html"}
 )
 
 public class TestRunner {

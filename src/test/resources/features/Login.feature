@@ -1,6 +1,14 @@
 Feature: Login steps
 
 
+  @validcredential
+  Scenario: Entering login credentials and navigating to add employee
+    When user enters valid username and password
+    And user clicks on login button
+    Then user is able to see the dashborad page
+    When user clicks on PIM option
+    And user clicks on Add employee option
+
   @emptyUsername @loginsteps
   Scenario: blank username credentials
     When user enters blank username
