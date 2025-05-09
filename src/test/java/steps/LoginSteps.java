@@ -4,7 +4,6 @@ package steps;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import pages.LoginPage;
 import utils.CommonMethods;
 import utils.ConfigReader;
 
@@ -86,25 +85,12 @@ public class LoginSteps extends CommonMethods {
     }
 
 
-    @Then("user is able to see the dashborad page")
-    public void user_is_able_to_see_the_dashborad_page() {
-        String errorMessage = loginPage.errorMessage.getText();
-        Assert.assertEquals(errorMessage, "Password is Empty");
+    @Then("user is able to see the dashboard page")
+    public void user_is_able_to_see_the_dashboard_page() {
+        String dashboard = loginPage.dashboard.getText();
+        Assert.assertEquals(dashboard, "Dashboard");
         System.out.println("Successfully loaded dashboard");
     }
-
-
-    @When("user clicks on PIM option")
-    public void user_clicks_on_pim_option() {
-        click(loginPage.pimOptBtn);
-    }
-
-
-    @When("user clicks on Add employee option")
-    public void user_clicks_on_add_employee_option() {
-        click(loginPage.addEmpOption);
-    }
-
 
 
 }

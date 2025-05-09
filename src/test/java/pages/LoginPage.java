@@ -19,14 +19,12 @@ public class LoginPage extends CommonMethods {
     @FindBy(id = "btnLogin")
     public WebElement loginButton;
 
-    @FindBy(id="menu_pim_viewPimModule")
-    public WebElement pimOptBtn;
-
-    @FindBy(id="menu_pim_addEmployee")
-    public WebElement addEmpOption;
 
     @FindBy(id = "spanMessage")
     public WebElement errorMessage;
+
+    @FindBy(xpath = "//h1[text()='Dashboard']")
+    public WebElement dashboard;
 
 
     public LoginPage() {

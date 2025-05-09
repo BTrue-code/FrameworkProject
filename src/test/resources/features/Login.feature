@@ -5,9 +5,7 @@ Feature: Login steps
   Scenario: Entering login credentials and navigating to add employee
     When user enters valid username and password
     And user clicks on login button
-    Then user is able to see the dashborad page
-    When user clicks on PIM option
-    And user clicks on Add employee option
+    And user is able to see the dashboard page
 
   @emptyUsername @loginsteps @totaltest
   Scenario: blank username credentials
@@ -23,7 +21,7 @@ Feature: Login steps
     And user clicks on login button
     Then user can see error message
 
-  @InvalidCredentials @loginsteps
+  @InvalidCredentials @loginsteps @totaltest
   Scenario: invalid username and password login credentials
     When user enters invalid username
     And user enters invalid password

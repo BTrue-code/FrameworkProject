@@ -20,6 +20,11 @@ public class AddEmployeePage extends CommonMethods {
     @FindBy(id="btnSave")
     public WebElement saveBtn;
 
+    @FindBy(id="menu_pim_viewPimModule")
+    public WebElement pimOptBtn;
+
+    @FindBy(id="menu_pim_addEmployee")
+    public WebElement addEmpOption;
 
     @FindBy(id="menu_pim_viewEmployeeList")
     public WebElement viewEmpList;

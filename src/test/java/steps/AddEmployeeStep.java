@@ -59,5 +59,14 @@ public class AddEmployeeStep extends CommonMethods {
         click(addEmployeePage.btnSearch);
     }
 
+    @When("user clicks on PIM option")
+    public void user_clicks_on_pim_option() {
+        click(addEmployeePage.pimOptBtn);
+    }
 
+
+    @When("user clicks on Add employee option")
+    public void user_clicks_on_add_employee_option() {
+        click(addEmployeePage.addEmpOption);
+    }
 }

@@ -4,7 +4,7 @@ Feature: Add Employee
   Background:
     When user enters valid username and password
     And user clicks on login button
-    Then user is able to see the dashborad page
+    And user is able to see the dashboard page
     When user clicks on PIM option
     And user clicks on Add employee option
 
