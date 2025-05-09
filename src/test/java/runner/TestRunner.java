@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         glue = "steps",
         dryRun = false,
         tags = "@validcredential",
-        plugin = {"pretty", "html:target/cucumber.html"}
+        plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json"}
 )
 
 public class TestRunner {
