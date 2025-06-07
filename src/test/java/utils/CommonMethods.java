@@ -6,6 +6,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -27,7 +28,9 @@ public class CommonMethods extends PageInitializer {
     public void openBrowserAndLaunchApp() {
         switch(ConfigReader.read("browser")) {
             case "Chrome":
-                driver = new ChromeDriver();
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--headless=new");
+                driver = new ChromeDriver(options);
                 break;
             case "Firefox":
                 driver = new FirefoxDriver();
